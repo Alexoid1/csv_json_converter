@@ -32,7 +32,7 @@ If you want to convert `csv string`, to json you can use `to_json` method from `
 
 <i>For example </i>
 ```ruby
-   #```
+
     require 'csv_json_converter'
 
     data_csv='file;text;number;hex
@@ -41,16 +41,12 @@ If you want to convert `csv string`, to json you can use `to_json` method from `
     json_data = CsvJsonCoverter::Csv.to_json(data_csv)
 
     print json_data
-    #{ "file": "test18.csv",
-    #  "text": "CMkABfAGXvmSFV",
-    #  "number": 9892576,
-    #  "hex": "jz40cbafbec8d6f92e93d22ea6ef5b"
-    #}
-    #```
+   
 ```
 
 **The output looks like below**
-```{ "file": "test18.csv",
+```
+    { "file": "test18.csv",
       "text": "CMkABfAGXvmSFV",
       "number": 9892576,
       "hex": "jz40cbafbec8d6f92e93d22ea6ef5b"
