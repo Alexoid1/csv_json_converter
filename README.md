@@ -13,8 +13,8 @@
   - [:busts_in_silhouette: Authors ](#-authors-)
   - [:handshake: Contributing ](#-contributing-)
   - [:star:️ Show your support ](#️-show-your-support-)
-# :book: json_or_ruby_to_csv <a name="about-project"></a>
-This gem converts data from a variety of sources into a comma-separated value (CSV) format. The gem can convert arrays of JSON objects, arrays of hashes, arrays of ActionController params, simple hashes, or ActiveRecord relations and objects. The CSV format is a common way to store data in a tabular format. It is often used for data exchange between different applications.
+# :book: csv_json_convert <a name="about-project"></a>
+This gem converts a csv string to json object.
 ## Installation <a name="tech-stack"></a>
 Add the following code to you Gemfile
 ```
