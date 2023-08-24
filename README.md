@@ -38,7 +38,7 @@ If you want to convert `csv string`, to json you can use `to_json` method from `
     data_csv='file;text;number;hex
               test18.csv;CMkABfAGXvmSFV;9892576;jz40cbafbec8d6f92e93d22ea6ef5b'
 
-    json_data = CsvJsonCoverter::Csv.to_json(data_csv)
+    json_data = CsvJsonCoverter.to_json(data_csv)
 
     print json_data
    
