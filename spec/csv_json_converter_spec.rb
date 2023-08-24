@@ -36,29 +36,29 @@ RSpec.describe CsvJsonConverter do
 
   it "Should be an Array" do
     
-    expect(JSON.parse(CsvJsonConverter::CsvParse.parse(csvExample, true))).to be_an_instance_of(Array) 
+    expect(JSON.parse(CsvJsonConverter::Csv.to_json(csvExample))).to be_an_instance_of(Array) 
   end
 
   it "Should have the value of string" do
    
-    expect(JSON.parse(CsvJsonConverter::CsvParse.parse(csvExample, true))[0]["file"]).to eql("  test18.csv")
+    expect(JSON.parse(CsvJsonConverter::Csv.to_json(csvExample))[0]["file"]).to eql("  test18.csv")
     
   end
 
   it "Should be a empty array when any data is passed" do
 
-    expect(CsvJsonConverter::CsvParse.parse(csvEmpty, true)).to eql("[]")
+    expect(CsvJsonConverter::Csv.to_json(csvEmpty)).to eql("[]")
   end
 
   it "Should convert to json a csv with semicolon as separator" do
 
-    expect(JSON.parse(CsvJsonConverter::CsvParse.parse(csvExampleSep, true, ';'))[0]["file"]).to eql("  test18.csv")
+    expect(JSON.parse(CsvJsonConverter::Csv.to_json(csvExampleSep, ';'))[0]["file"]).to eql("  test18.csv")
     
   end
 
   it "Should convert to json a csv with || as separator" do
 
-    expect(JSON.parse(CsvJsonConverter::CsvParse.parse(csvExample2Sep, true, '||'))[0]["file"]).to eql("  test18.csv")
+    expect(JSON.parse(CsvJsonConverter::Csv.to_json(csvExample2Sep, '||'))[0]["file"]).to eql("  test18.csv")
     
   end
 end
