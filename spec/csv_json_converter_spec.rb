@@ -3,6 +3,13 @@ require 'csv_json_converter'
 
 RSpec.describe CsvJsonConverter do
 
+  
+
+  it "has a version number" do
+    expect(CsvJsonConverter::VERSION).not_to be nil
+  end
+
+  
   let(:csvExample){ 'file,text,number,hex
   test18.csv,ERPL
   test18.csv,CMkABfAGXvmSFV,9892576,jz40cbafbec8d6f92e93d22ea6ef5b
@@ -29,36 +36,35 @@ RSpec.describe CsvJsonConverter do
   '}
 
   let(:csvEmpty){ 'file,text,number,hex' }
+  
+  context 'covert csv to json' do
 
-  it "has a version number" do
-    expect(CsvJsonConverter::VERSION).not_to be nil
-  end
+    it "Should be an Array" do
+      
+      expect(JSON.parse(CsvJsonConverter.to_json(csvExample))).to be_an_instance_of(Array) 
+    end
 
-  it "Should be an Array" do
+    it "Should have the value of string" do
     
-    expect(JSON.parse(CsvJsonConverter.to_json(csvExample))).to be_an_instance_of(Array) 
-  end
+      expect(JSON.parse(CsvJsonConverter.to_json(csvExample))[0]["file"]).to eql("  test18.csv")
+      
+    end
 
-  it "Should have the value of string" do
-   
-    expect(JSON.parse(CsvJsonConverter.to_json(csvExample))[0]["file"]).to eql("  test18.csv")
-    
-  end
+    it "Should be a empty array when any data is passed" do
 
-  it "Should be a empty array when any data is passed" do
+      expect(CsvJsonConverter.to_json(csvEmpty)).to eql("[]")
+    end
 
-    expect(CsvJsonConverter.to_json(csvEmpty)).to eql("[]")
-  end
+    it "Should convert to json a csv with semicolon as separator" do
 
-  it "Should convert to json a csv with semicolon as separator" do
+      expect(JSON.parse(CsvJsonConverter.to_json(csvExampleSep, ';'))[0]["file"]).to eql("  test18.csv")
+      
+    end
 
-    expect(JSON.parse(CsvJsonConverter.to_json(csvExampleSep, ';'))[0]["file"]).to eql("  test18.csv")
-    
-  end
+    it "Should convert to json a csv with || as separator" do
 
-  it "Should convert to json a csv with || as separator" do
-
-    expect(JSON.parse(CsvJsonConverter.to_json(csvExample2Sep, '||'))[0]["file"]).to eql("  test18.csv")
-    
+      expect(JSON.parse(CsvJsonConverter.to_json(csvExample2Sep, '||'))[0]["file"]).to eql("  test18.csv")
+      
+    end
   end
 end
