@@ -17,7 +17,7 @@ module CsvJsonConverter
   end
 
   def self.to_csv(input)
-    
+
     for_json=JSON.parse(input)
     column_names = for_json.first.keys
     csv_string=CSV.generate do |csv|
@@ -33,7 +33,7 @@ module CsvJsonConverter
 end
 
 
-arr_json=CsvJsonConverter.to_json('file,text,number,hex
+p arr_json=CsvJsonConverter.to_json('file,text,number,hex
 test18.csv,CMkABfAGXvmSFV,9892576,jz40cbafbec8d6f92e93d22ea6ef5b
 test18.csv,NCVTagVs,815097234,jz0ee6f01d178831228b957376f15c
 test18.csv,RCZgwkLosc,3,jz22ff45479c30a890925d5832c319

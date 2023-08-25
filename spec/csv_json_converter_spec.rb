@@ -36,6 +36,9 @@ RSpec.describe CsvJsonConverter do
   '}
 
   let(:csvEmpty){ 'file,text,number,hex' }
+
+  let(:jsonExample){ "[{\"file\":\"test18.csv\",\"text\":\"CMkABfAGXvmSFV\",\"number\":\"9892576\",\"hex\":\"jz40cbafbec8d6f92e93d22ea6ef5b\"},{\"file\":\"test18.csv\",\"text\":\"NCVTagVs\",\"number\":\"815097234\",\"hex\":\"jz0ee6f01d178831228b957376f15c\"},{\"file\":\"test18.csv\",\"text\":\"RCZgwkLosc\",\"number\":\"3\",\"hex\":\"jz22ff45479c30a890925d5832c319\"},{\"file\":\"test18.csv\",\"text\":\"HZgYgaBNZFXyVdzuRuddpg\",\"number\":\"31\",\"hex\":\"jz737707427673939e4c198598cefc\"},{\"file\":\"test18.csv\",\"text\":\"tfp\",\"number\":\"6\",\"hex\":\"jzedd110611f58b53215dd0b27f7ba\"}]"
+}
   
   context 'covert csv to json' do
 
@@ -66,5 +69,17 @@ RSpec.describe CsvJsonConverter do
       expect(JSON.parse(CsvJsonConverter.to_json(csvExample2Sep, '||'))[0]["file"]).to eql("  test18.csv")
       
     end
+
   end
+
+  context 'convert json to csv' do
+
+    it "Should be a string" do
+      expect(CsvJsonConverter.to_csv(jsonExample)).to be_an_instance_of(String) 
+    end
+
+    it "Should have headers in the string" do
+      expect(CsvJsonConverter.to_csv(jsonExample)).to include('file,text,number,hex')
+    end
+  end  
 end
