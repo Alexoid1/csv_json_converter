@@ -1,15 +1,13 @@
 # CsvJsonConverter
 
 <a name="readme-top"></a>
-# :green_book: Table of Contents
 [![csv_json_ - converter](https://img.shields.io/badge/csv_json_convert_-csv-2ea44f)](https://rubygems.org/gems/csv_json_converter)
 - [:green_book: Table of Contents](#-table-of-contents)
 - [:book: csv\_json\_converter ](#-csv_json_converter-)
   - [Installation ](#installation-)
     - [Usage](#usage)
-      - [Using to\_json](#csv_to_json)
-      - [Using activerecord\_to\_csv](#using-activerecord_to_csv)
-      - [json\_or\_ruby\_to\_csv usage with rails controller](#json_or_ruby_to_csv-usage-with-rails-controller)
+      - [Convert csv to json](#convert-csv-to-json)
+      - [Convert json to csv](#convert-json-to-csv)
   - [:busts_in_silhouette: Authors ](#-authors-)
   - [:handshake: Contributing ](#-contributing-)
   - [:star:️ Show your support ](#️-show-your-support-)
@@ -52,7 +50,7 @@ If you want to convert `csv string`, to json you can use `to_json` method from `
       "hex": "jz40cbafbec8d6f92e93d22ea6ef5b"
     }
 ```
-### Covert json to csv
+###Covert json to csv
 If you want to convert `json object`, to json you can use `to_csv` method from `CsvJsonConverter`. Let's see how:-
 
 <i>For example </i>
