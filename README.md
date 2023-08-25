@@ -74,7 +74,7 @@ If you want to convert `json object`, to json you can use `to_csv` method from `
 
 **The output looks like below**
 ```
-    "file,text,number,hex\ntest18.csv,CMkABfAGXvmSFV,9892576,jz40cbafbec8d6f92e93d22ea6ef5b
+    "file,text,number,hex\ntest18.csv,CMkABfAGXvmSFV,9892576,jz40cbafbec8d6f92e93d22ea6ef5b"
 ```
 ## :busts_in_silhouette: Authors <a name="authors"></a>
  :bust_in_silhouette: Pablo Zambrano
