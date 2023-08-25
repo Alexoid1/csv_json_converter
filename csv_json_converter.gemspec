@@ -10,12 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = "This is a gem to covert csv to json string"
   spec.description = "This gem transform a csv string in a json string."
-  spec.homepage = "https://github.com/Alexoid1/csv_json_converter"
+  spec.homepage = "https://rubygems.org/gems/csv_json_converter"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
 
   spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["documentation_uri"] = "https://github.com/Alexoid1/csv_json_converter"
   spec.metadata["source_code_uri"] = "https://github.com/Alexoid1/csv_json_converter"
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

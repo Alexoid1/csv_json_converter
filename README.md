@@ -2,7 +2,7 @@
 
 <a name="readme-top"></a>
 # :green_book: Table of Contents
-[![csv_json_ - converter](https://img.shields.io/badge/json__or__ruby__to__-csv-2ea44f)](https://rubygems.org/gems/csv_json_converter)
+[![csv_json_ - converter](https://img.shields.io/badge/csv_json_convert_-csv-2ea44f)](https://rubygems.org/gems/csv_json_converter)
 - [:green_book: Table of Contents](#-table-of-contents)
 - [:book: csv\_json\_converter ](#-csv_json_converter-)
   - [Installation ](#installation-)
@@ -27,7 +27,7 @@ gem install csv_json_converter
 ```
 ### Usage
 `require` this gem on the top of your ruby code.
-#### Covert csv_to_json
+### Covert csv to json
 If you want to convert `csv string`, to json you can use `to_json` method from `CsvJsonConverter`. Let's see how:-
 
 <i>For example </i>
@@ -52,7 +52,30 @@ If you want to convert `csv string`, to json you can use `to_json` method from `
       "hex": "jz40cbafbec8d6f92e93d22ea6ef5b"
     }
 ```
+### Covert json to csv
+If you want to convert `json object`, to json you can use `to_csv` method from `CsvJsonConverter`. Let's see how:-
 
+<i>For example </i>
+```ruby
+
+    require 'csv_json_converter'
+
+    data_json={ "file": "test18.csv",
+      "text": "CMkABfAGXvmSFV",
+      "number": 9892576,
+      "hex": "jz40cbafbec8d6f92e93d22ea6ef5b"
+    }
+
+    csv_data = CsvJsonCoverter.to_csv(data_json)
+
+    print csv_data
+   
+```
+
+**The output looks like below**
+```
+    "file,text,number,hex\ntest18.csv,CMkABfAGXvmSFV,9892576,jz40cbafbec8d6f92e93d22ea6ef5b
+```
 ## :busts_in_silhouette: Authors <a name="authors"></a>
  :bust_in_silhouette: Pablo Zambrano
 - GitHub: [@alexoid1](https://github.com/melashu)
