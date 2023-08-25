@@ -6,8 +6,8 @@
 - [:book: csv\_json\_converter ](#-csv_json_converter-)
   - [Installation ](#installation-)
     - [Usage](#usage)
-      - [Convert csv to json](#convert-csv-to-json-)
-      - [Convert json to csv](#convert-json-to-csv-)
+      - [Convert csv to json](#csv-to-json)
+      - [Convert json to csv](#json-to-csv)
   - [:busts_in_silhouette: Authors ](#-authors-)
   - [:handshake: Contributing ](#-contributing-)
   - [:star:️ Show your support ](#️-show-your-support-)
@@ -25,7 +25,7 @@ gem install csv_json_converter
 ```
 ### Usage
 `require` this gem on the top of your ruby code.
-### Covert csv to json
+### Csv to json
 If you want to convert `csv string`, to json you can use `to_json` method from `CsvJsonConverter`. Let's see how:-
 
 <i>For example </i>
@@ -50,7 +50,7 @@ If you want to convert `csv string`, to json you can use `to_json` method from `
       "hex": "jz40cbafbec8d6f92e93d22ea6ef5b"
     }
 ```
-###Covert json to csv
+###Json to csv
 If you want to convert `json object`, to json you can use `to_csv` method from `CsvJsonConverter`. Let's see how:-
 
 <i>For example </i>
