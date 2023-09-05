@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["alexoid1"]
   spec.email = ["alexzambra2610@gmail.com"]
 
-  spec.summary = "This is a gem to covert csv to json string"
+  spec.summary = "This is a gem to covert csv to json string and vice versa"
   spec.description = "This gem transform a csv string in a json string."
   spec.homepage = "https://rubygems.org/gems/csv_json_converter"
   spec.license = "MIT"
